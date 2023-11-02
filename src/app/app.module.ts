@@ -8,11 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-
+import { InputEventBindingComponent } from './input-event-binding/input-event-binding.component';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
     ProvaComponent,
+    InputEventBindingComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatCardModule,
     MatSlideToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
