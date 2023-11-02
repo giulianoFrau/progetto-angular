@@ -1,7 +1,11 @@
-<form class="example-form">
-    <mat-form-field class="example-full-width">
+
+    
       <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" [value]="inputValue" (input)="onInput($event)">
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="onClick()">Primary</button>
-  </form>
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" name="input">
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="subtitle" name="input" style="margin-top: 10px;">
+
+    <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+ 
+
+
+  <p>{{title}}</p>

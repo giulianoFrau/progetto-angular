@@ -7,14 +7,20 @@ import { Component } from '@angular/core';
 })
 export class InputEventBindingComponent {
   inputValue="test"
-   onClick(){
-    console.log('ciao')
-  }
+  title="corso angular";
+  subtitle="test"
+   
 /*   onInput(e:any){
     console.log(e.target.value) alternativa a giu più semplice
   } */
 
   onInput(e:Event){
+    this.title=(<HTMLInputElement>e.target).value
     console.log((<HTMLInputElement>e.target).value)
+  }
+
+  onClick(e:any){
+    // this.title='ho cliccato sul bottone'
+console.log(this.title + this.subtitle)
   }
 }

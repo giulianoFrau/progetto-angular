@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { InputEventBindingComponent } from './input-event-binding/input-event-binding.component';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatSlideToggleModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
