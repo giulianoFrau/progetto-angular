@@ -8,4 +8,8 @@
  
 
 
-  <p>{{title}}</p>
+  <p *ngIf="isVisible;else bloccoElse">{{title}}</p>
+
+  <ng-template #bloccoElse>
+    <p *ngIf="isVisible">non visibile</p>
+  </ng-template>

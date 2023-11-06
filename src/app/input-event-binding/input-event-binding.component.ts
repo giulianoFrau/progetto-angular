@@ -9,6 +9,7 @@ export class InputEventBindingComponent {
   inputValue="test"
   title="corso angular";
   subtitle="test"
+  isVisible=true
    
 /*   onInput(e:any){
     console.log(e.target.value) alternativa a giu più semplice
