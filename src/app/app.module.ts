@@ -10,8 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { InputEventBindingComponent } from './input-event-binding/input-event-binding.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { Prova2Component } from './prova2/prova2.component';
 @NgModule({
-  declarations: [AppComponent, ProvaComponent, InputEventBindingComponent],
+  declarations: [AppComponent, ProvaComponent, InputEventBindingComponent, Prova2Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
