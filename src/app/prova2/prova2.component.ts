@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-prova2',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prova2.component.css'],
 })
 export class Prova2Component implements OnInit {
+  @Input() title: string = '';
   constructor() {}
 
   ngOnInit(): void {}
