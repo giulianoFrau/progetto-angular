@@ -31,17 +31,28 @@ export class ProvaComponent
   ];
 
   isDisabled = false;
-  immagine1="https://play-lh.googleusercontent.com/0VdMo-szGhdQpvEOvHOOG3ii27IkJCt4L9f8FMMKkTcfzADbNRbliz7Y6uDdbrOnG54O";
-  immagine2="https://material.angular.io/assets/img/examples/shiba2.jpg"
+  immagine1 =
+    'https://play-lh.googleusercontent.com/0VdMo-szGhdQpvEOvHOOG3ii27IkJCt4L9f8FMMKkTcfzADbNRbliz7Y6uDdbrOnG54O';
+  immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
+  data: any = [];
   constructor() {
     console.log('costruttore');
   }
   ngOnInit(): void {
     console.log('onInit');
-    setInterval(() => {
-      this.isDisabled = !this.isDisabled;
-    }, 2000);
+    this.fetchData();
   }
+
+  changeButtonColor() {
+    this.isDisabled = !this.isDisabled;
+  }
+
+  async fetchData(): Promise<void> {
+    const response = await fetch('https://restcountries.com/v3.1/all');
+    this.data = await response.json();
+    console.log(this.data);
+  }
+
   ngAfterContentInit(): void {
     console.log('afterContentInit');
   }

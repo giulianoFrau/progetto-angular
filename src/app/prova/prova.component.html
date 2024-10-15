@@ -1,3 +1,5 @@
+<hr>
+<h1>Componente prova</h1>
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>{{cani[0].nome.toUpperCase()}}</mat-card-title>
@@ -5,9 +7,16 @@
   </mat-card-header>
   <mat-card-content>
     <p>{{cani[0].descrizione}}</p>
-    <img mat-card-image [src]="isDisabled?immagine1:immagine2" alt="Photo of a Shiba Inu">
+
+    <img mat-card-image [src]="isDisabled?immagine1:immagine2" class="example-card__img" alt="Photo of a Shiba Inu">
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" [disabled]="isDisabled">Bottone disabilitato o no</button>
+    <button mat-raised-button [color]="isDisabled?'primary':'warn'" (click)="changeButtonColor()">Bottone
+      disabilitato o no</button>
   </mat-card-actions>
+
+  <!--   <div *ngFor="let city of data">
+    {{ city.name.common }}
+  </div> -->
+
 </mat-card>
