@@ -5,6 +5,7 @@ import {
   DoCheck,
   OnDestroy,
   OnInit,
+  Input,
 } from '@angular/core';
 
 @Component({
@@ -18,7 +19,8 @@ export class ProvaComponent
     AfterContentInit,
     AfterViewChecked,
     DoCheck,
-    OnDestroy
+    OnDestroy,
+    OnInit
 {
   longText: string = `.`;
   cani: Array<{ nome: string; razza: string; descrizione: string }> = [
@@ -37,6 +39,7 @@ export class ProvaComponent
   immagine2: string =
     'https://material.angular.io/assets/img/examples/shiba2.jpg';
   data: any = [];
+  @Input() title: string = '';
   constructor() {
     console.log('costruttore');
   }
