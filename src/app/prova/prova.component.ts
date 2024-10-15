@@ -14,15 +14,14 @@ import {
 })
 export class ProvaComponent
   implements
-    OnInit,
     AfterViewChecked,
     AfterContentInit,
     AfterViewChecked,
     DoCheck,
     OnDestroy
 {
-  longText = `.`;
-  cani = [
+  longText: string = `.`;
+  cani: Array<{ nome: string; razza: string; descrizione: string }> = [
     {
       nome: 'jack',
       razza: 'pastore tedesco',
@@ -32,10 +31,11 @@ export class ProvaComponent
     },
   ];
 
-  isDisabled = false;
-  immagine1 =
+  isDisabled: boolean = false;
+  immagine1: string =
     'https://play-lh.googleusercontent.com/0VdMo-szGhdQpvEOvHOOG3ii27IkJCt4L9f8FMMKkTcfzADbNRbliz7Y6uDdbrOnG54O';
-  immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
+  immagine2: string =
+    'https://material.angular.io/assets/img/examples/shiba2.jpg';
   data: any = [];
   constructor() {
     console.log('costruttore');
