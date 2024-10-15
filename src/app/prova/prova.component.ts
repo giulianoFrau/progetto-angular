@@ -2,6 +2,7 @@ import {
   AfterContentInit,
   AfterViewChecked,
   Component,
+  DoCheck,
   OnDestroy,
   OnInit,
 } from '@angular/core';
@@ -17,6 +18,7 @@ export class ProvaComponent
     AfterViewChecked,
     AfterContentInit,
     AfterViewChecked,
+    DoCheck,
     OnDestroy
 {
   longText = `.`;
@@ -51,6 +53,9 @@ export class ProvaComponent
     const response = await fetch('https://restcountries.com/v3.1/all');
     this.data = await response.json();
     console.log(this.data);
+  }
+  ngDoCheck(): void {
+    console.log('doCheck');
   }
 
   ngAfterContentInit(): void {
