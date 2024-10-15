@@ -48,8 +48,9 @@ export class ProvaComponent
     this.fetchData();
   }
 
-  changeButtonColor() {
+  changeButtonColor(img: string) {
     this.isDisabled = !this.isDisabled;
+    console.log(img);
   }
 
   async fetchData(): Promise<void> {

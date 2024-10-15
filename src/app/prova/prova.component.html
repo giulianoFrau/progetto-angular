@@ -11,7 +11,8 @@
     <img mat-card-image [src]="isDisabled?immagine1:immagine2" class="example-card__img" alt="Photo of a Shiba Inu">
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button [color]="isDisabled?'primary':'warn'" (click)="changeButtonColor()">Bottone
+    <button mat-raised-button [color]="isDisabled?'primary':'warn'"
+      (click)="changeButtonColor(isDisabled?immagine1:immagine2)">Bottone
       disabilitato o no</button>
   </mat-card-actions>
 
