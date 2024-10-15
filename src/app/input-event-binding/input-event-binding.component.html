@@ -3,6 +3,7 @@
   <mat-label>Favorite food</mat-label>
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" name="input">
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="subtitle" name="input" style="margin-top: 10px;">
+  <input matInput placeholder="test" style="margin-top: 10px;" (input)="onInput($event)">
   <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
   <button mat-raised-button color="primary" (click)="isVisible = !isVisible">test</button>
 

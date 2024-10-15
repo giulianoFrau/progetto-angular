@@ -11,14 +11,13 @@ export class InputEventBindingComponent {
   subtitle = 'test';
   isVisible = true;
 
-  /*   onInput(e:any){
-    console.log(e.target.value) alternativa a giu più semplice
-  } */
-
-  onInput(e: Event) {
-    this.title = (<HTMLInputElement>e.target).value;
-    console.log((<HTMLInputElement>e.target).value);
+  onInput(e: any) {
+    console.log(e.target.value); //alternativa a giu più semplice
   }
+
+  /*  onInput(e: Event) {
+    console.log((<HTMLInputElement>e.target).value);
+  } */
 
   onClick(e: any) {
     // this.title='ho cliccato sul bottone'

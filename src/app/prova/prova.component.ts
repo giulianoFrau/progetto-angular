@@ -59,14 +59,14 @@ export class ProvaComponent
     console.log(this.data);
   }
   ngDoCheck(): void {
-    console.log('doCheck');
+    //console.log('doCheck');
   }
 
   ngAfterContentInit(): void {
     console.log('afterContentInit');
   }
   ngAfterViewChecked(): void {
-    console.log('afterViewCheck');
+    //console.log('afterViewCheck');
   }
   ngOnDestroy(): void {
     console.log('destroy');
