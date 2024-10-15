@@ -7,11 +7,12 @@
   <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
   <button mat-raised-button color="primary" (click)="isVisible = !isVisible">test</button>
 
-  <!-- <p *ngIf="isVisible;else bloccoElse">{{title}}</p>
-    <ng-template #bloccoElse>
+  <p *ngIf="isVisible;else bloccoElse">Visibile</p>
+  <ng-template #bloccoElse>
     <p *ngIf="isVisible">non visibile</p>
-  </ng-template> -->
+  </ng-template>
 </div>
+
 <app-prova [title]="title"></app-prova>
 
 <app-prova2 [title]="title" [test]="isVisible"></app-prova2>
