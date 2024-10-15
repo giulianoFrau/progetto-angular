@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class Prova2Component implements OnInit {
   @Input() title: string = '';
+  @Input() test: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
