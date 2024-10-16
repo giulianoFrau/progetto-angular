@@ -7,6 +7,7 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 })
 export class Prova3Component {
   @ViewChild('inputSaluti') valoreInput!: ElementRef;
+  colore = 'purple';
   ngAfterViewInit() {
     console.log(this.valoreInput.nativeElement.value);
   }
