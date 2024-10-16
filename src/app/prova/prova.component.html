@@ -16,8 +16,11 @@
       disabilitato o no</button>
   </mat-card-actions>
 
-  <!--   <div *ngFor="let city of data">
-    {{ city.name.common }}
-  </div> -->
+
+  <div *ngFor="let city of data;index as i;count as dataLength">
+    <div *ngIf="i==0">Lunghezza array {{dataLength}} elementi</div>
+    <span>{{i}})</span> {{ city.name.common }}
+    <span class="font-bold" *ngIf="city.name.common == 'Italy'">- {{ city.name.official }}</span>
+  </div>
 
 </mat-card>

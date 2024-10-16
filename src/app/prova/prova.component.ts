@@ -23,7 +23,7 @@ export class ProvaComponent
     OnInit
 {
   longText: string = `.`;
-  cani: Array<{ nome: string; razza: string; descrizione: string }> = [
+  cani = [
     {
       nome: 'jack',
       razza: 'pastore tedesco',
@@ -56,7 +56,9 @@ export class ProvaComponent
   async fetchData(): Promise<void> {
     const response = await fetch('https://restcountries.com/v3.1/all');
     this.data = await response.json();
-    console.log(this.data);
+    this.data = this.data.sort((a: any, b: any) =>
+      a.name.common.localeCompare(b.name.common)
+    );
   }
   ngDoCheck(): void {
     //console.log('doCheck');
