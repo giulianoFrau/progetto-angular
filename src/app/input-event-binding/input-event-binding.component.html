@@ -6,6 +6,7 @@
   <input matInput placeholder="test" style="margin-top: 10px;" (input)="onInput($event)">
   <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
   <button mat-raised-button color="primary" (click)="isVisible = !isVisible">test</button>
+  <button mat-raised-button color="primary" (click)="title = 'ciao'">test</button>
 
   <p *ngIf="isVisible;else bloccoElse">Visibile</p>
   <ng-template #bloccoElse>

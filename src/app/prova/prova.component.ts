@@ -6,6 +6,7 @@ import {
   OnDestroy,
   OnInit,
   Input,
+  SimpleChange,
 } from '@angular/core';
 
 @Component({
@@ -65,6 +66,9 @@ export class ProvaComponent
     //console.log('doCheck');
   }
 
+  ngOnChanges(changes: SimpleChange): void {
+    console.log(changes);
+  }
   ngAfterContentInit(): void {
     console.log('afterContentInit');
   }
