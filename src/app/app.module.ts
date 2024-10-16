@@ -12,8 +12,16 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { Prova2Component } from './prova2/prova2.component';
 import { Prova3Component } from './prova3/prova3.component';
+import { HighlightDirective } from './direttive/highlight.directive';
 @NgModule({
-  declarations: [AppComponent, ProvaComponent, InputEventBindingComponent, Prova2Component, Prova3Component],
+  declarations: [
+    AppComponent,
+    ProvaComponent,
+    InputEventBindingComponent,
+    Prova2Component,
+    Prova3Component,
+    HighlightDirective,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
