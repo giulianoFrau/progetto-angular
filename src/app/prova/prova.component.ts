@@ -34,6 +34,7 @@ export class ProvaComponent
   ];
 
   isDisabled: boolean = false;
+  stringaSwitchCase: string = 'a';
   immagine1: string =
     'https://play-lh.googleusercontent.com/0VdMo-szGhdQpvEOvHOOG3ii27IkJCt4L9f8FMMKkTcfzADbNRbliz7Y6uDdbrOnG54O';
   immagine2: string =

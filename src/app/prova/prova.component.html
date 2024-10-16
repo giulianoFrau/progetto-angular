@@ -1,4 +1,5 @@
 <hr>
+<!-- ************ESEMPIO CARD CON CONTENUTO E IMMAGINE DINAMICHE*************** -->
 <h1>Componente prova</h1>
 <mat-card class="example-card">
   <mat-card-header>
@@ -7,7 +8,6 @@
   </mat-card-header>
   <mat-card-content>
     <p>{{cani[0].descrizione}}</p>
-
     <img mat-card-image [src]="isDisabled?immagine1:immagine2" class="example-card__img" alt="Photo of a Shiba Inu">
   </mat-card-content>
   <mat-card-actions>
@@ -17,10 +17,20 @@
   </mat-card-actions>
 
 
-  <div *ngFor="let city of data;index as i;count as dataLength">
+  <!-- ************ FOR LOOP E IF NGCLASS E NGSTYLE *************** -->
+  <!--  <div *ngFor="let city of data;index as i;count as dataLength; odd as isOdd">
     <div *ngIf="i==0">Lunghezza array {{dataLength}} elementi</div>
-    <span>{{i}})</span> {{ city.name.common }}
-    <span class="font-bold" *ngIf="city.name.common == 'Italy'">- {{ city.name.official }}</span>
-  </div>
+    <div [ngStyle]="{'color': isOdd ? 'red' : 'green','font-weight': isOdd ? 'bold' : 'light'}"
+      [ngClass]="isOdd ? 'background-blue' : 'background-yellow'">
+      <span>{{i}})</span> {{ city.name.common }}
+      <span class="font-bold" *ngIf="city.name.common == 'Italy'">- {{ city.name.official }}</span>
+    </div>
+  </div> -->
 
+  <!-- ************ SWITCH CASE *************** -->
+  <!--   <div [ngSwitch]="stringaSwitchCase">
+    <p *ngSwitchCase="'a'">La stringa è A</p>
+    <p *ngSwitchCase="'b'">La stringa è B</p>
+    <p *ngSwitchDefault>La stringa è C</p>
+  </div> -->
 </mat-card>
