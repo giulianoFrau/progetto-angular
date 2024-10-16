@@ -11,8 +11,9 @@ import { InputEventBindingComponent } from './input-event-binding/input-event-bi
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { Prova2Component } from './prova2/prova2.component';
+import { Prova3Component } from './prova3/prova3.component';
 @NgModule({
-  declarations: [AppComponent, ProvaComponent, InputEventBindingComponent, Prova2Component],
+  declarations: [AppComponent, ProvaComponent, InputEventBindingComponent, Prova2Component, Prova3Component],
   imports: [
     BrowserModule,
     AppRoutingModule,
