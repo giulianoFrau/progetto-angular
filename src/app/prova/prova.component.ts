@@ -40,7 +40,7 @@ export class ProvaComponent
   immagine2: string =
     'https://material.angular.io/assets/img/examples/shiba2.jpg';
   data: any = [];
-  @Input() title: string = '';
+  @Input() title2: string = '';
   constructor() {
     console.log('costruttore');
   }
