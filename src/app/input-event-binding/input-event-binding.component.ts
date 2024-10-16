@@ -19,6 +19,10 @@ export class InputEventBindingComponent {
     console.log((<HTMLInputElement>e.target).value);
   } */
 
+  onRiceviDati(dati: any) {
+    console.log(dati);
+  }
+
   onClick(e: any) {
     // this.title='ho cliccato sul bottone'
     console.log(this.title + this.subtitle);
