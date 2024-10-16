@@ -7,6 +7,8 @@ import {
   OnInit,
   Input,
   SimpleChange,
+  EventEmitter,
+  Output,
 } from '@angular/core';
 
 @Component({
@@ -42,9 +44,12 @@ export class ProvaComponent
     'https://material.angular.io/assets/img/examples/shiba2.jpg';
   data: any = [];
   @Input() title2: string = '';
+  @Output() mandaArrayResponse = new EventEmitter<any>();
+
   constructor() {
     console.log('costruttore');
   }
+
   ngOnInit(): void {
     console.log('onInit');
     this.fetchData();
@@ -62,6 +67,11 @@ export class ProvaComponent
       a.name.common.localeCompare(b.name.common)
     );
   }
+
+  mandaArray() {
+    this.mandaArrayResponse.emit(this.data);
+  }
+
   ngDoCheck(): void {
     //console.log('doCheck');
   }

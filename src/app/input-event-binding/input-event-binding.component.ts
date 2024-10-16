@@ -23,6 +23,11 @@ export class InputEventBindingComponent {
     console.log(dati);
   }
 
+  onArrayResponse(array: any) {
+    console.log(array);
+    console.log('test');
+  }
+
   onClick(e: any) {
     // this.title='ho cliccato sul bottone'
     console.log(this.title + this.subtitle);
