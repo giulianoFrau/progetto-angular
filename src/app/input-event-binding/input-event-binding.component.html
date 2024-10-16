@@ -1,11 +1,11 @@
 <div>
-  <h1>Componente Input</h1>
-  <mat-label>Favorite food</mat-label>
+  <h1>Componente Input ngmodel - componente padre</h1>
+
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="title" name="input">
   <input matInput placeholder="Ex. Pizza" [(ngModel)]="subtitle" name="input" style="margin-top: 10px;">
-  <input matInput placeholder="test" style="margin-top: 10px;" (input)="onInput($event)">
-  <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
-  <button mat-raised-button color="primary" (click)="isVisible = !isVisible">test</button>
+  <input matInput placeholder="ciao" style="margin-top: 10px;" (input)="onInput($event)">
+  <button mat-raised-button color="primary" (click)="onClick()">Primary</button>
+  <button mat-raised-button color="primary" (click)="isVisible = !isVisible">Visibile/non visibile</button>
   <button mat-raised-button color="primary" (click)="title = 'ciao'">test</button>
 
   <p *ngIf="isVisible;else bloccoElse">Visibile</p>

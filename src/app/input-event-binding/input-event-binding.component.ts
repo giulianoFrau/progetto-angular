@@ -28,7 +28,7 @@ export class InputEventBindingComponent {
     console.log('test');
   }
 
-  onClick(e: any) {
+  onClick() {
     // this.title='ho cliccato sul bottone'
     console.log(this.title + this.subtitle);
   }
