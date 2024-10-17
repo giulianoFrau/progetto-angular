@@ -1,6 +1,10 @@
 <hr>
-<h1>Componente 3 VARIABILI TEMPLATE - </h1>
+<h1>Componente 3 VARIABILI TEMPLATE - PIPES </h1>
 
-<input #inputSaluti value="ciao">
+<input #inputSaluti value="cieao">
 
 <p appHighlight [coloreHilight]="colore">paragrafo con direttiva minuto 8! </p>
+
+<!-- PIPES -->
+<p>Ciao benvenuto al {{ title | uppercase}}</p>
+<p>oggi {{oggi | date:'dd-MM-yyyy'}}</p>
