@@ -15,9 +15,14 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
+    path: 'contact/:id',
+    component: ContactComponent,
+  },
+  {
     path: 'contact',
     component: ContactComponent,
   },
+
   {
     path: 'input',
     component: InputEventBindingComponent,
