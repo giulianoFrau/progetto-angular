@@ -18,11 +18,14 @@ export class Prova3Component {
   colore = 'purple';
   title = 'Corso angular ';
   oggi = new Date();
+  dataComponente: any[] = [];
 
   constructor(private servizioProva: ServizioProvaService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     console.log(this.servizioProva.datoDaIniettare);
+    await this.servizioProva.fetchData();
+    this.dataComponente = this.servizioProva.data;
   }
   ngAfterViewInit() {
     console.log(this.valoreInput.nativeElement.value);
