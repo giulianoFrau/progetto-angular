@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServizioProvaService } from '../servizi/servizio-prova.service';
+import { ServizioProvaService } from '../../servizi/servizio-prova.service';
 @Component({
   selector: 'app-input-event-binding',
   templateUrl: './input-event-binding.component.html',
