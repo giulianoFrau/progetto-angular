@@ -10,11 +10,13 @@
 <p>oggi {{oggi | date:'dd-MM-yyyy'}}</p>
 
 
-<div *ngFor="let city of dataComponente;index as i;count as dataLength; odd as isOdd">
+<!-- <div *ngFor="let city of dataComponente;index as i;count as dataLength; odd as isOdd">
     <div *ngIf="i==0">Lunghezza array {{dataLength}} elementi</div>
     <div [ngStyle]="{'color': isOdd ? 'red' : 'green','font-weight': isOdd ? 'bold' : 'light'}"
         [ngClass]="isOdd ? 'background-blue' : 'background-yellow'">
         <span>{{i}})</span> {{ city.name.common }}
         <span class="font-bold" *ngIf="city.name.common == 'Italy'">- {{ city.name.official }}</span>
     </div>
-</div>
+</div> -->
+
+<button (click)="fetchData()"> chiama api</button>

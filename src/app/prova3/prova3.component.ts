@@ -30,4 +30,8 @@ export class Prova3Component {
   ngAfterViewInit() {
     console.log(this.valoreInput.nativeElement.value);
   }
+
+  fetchData() {
+    this.servizioProva.fetchData();
+  }
 }
