@@ -1,9 +1,10 @@
 <p>lista contatti</p>
 
-<div *ngIf="!isProfile;else profiloContatto">
-    <p>>>Contatti</p>
+<div *ngIf="urlId==null;else profiloContatto">
+    <p>Contatti</p>
     <div *ngFor="let persona of persone;index as i">
-        <a [routerLink]="['/contact',i]">{{persona.nome}}</a>
+        <p>{{i+1}} {{persona.nome}} {{persona.cognome}}</p>
+        <button [routerLink]="['/contact',i+1]">Vai alla singola persona</button>
     </div>
 
 </div>
