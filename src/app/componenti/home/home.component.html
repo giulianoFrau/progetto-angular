@@ -1,1 +1,25 @@
-<p>homepage</p>
+<form #homeForm="ngForm" (ngSubmit)="onSubmit(homeForm)">
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" ngModel name="nome" required="">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" ngModel name="email" email>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Colori</mat-label>
+        <mat-select ngModel name="colori">
+            <mat-option value="rosso">Rosso</mat-option>
+            <mat-option value="blu">Blu</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!homeForm.valid">Invia</button>
+
+</form>
+
+
+<div *ngIf="isDataSend">
+    hai mandato i seguenti dati: {{formData?.nome}} e {{ formData?.email}}.. colore scelto : {{formData?.colori}}
+</div>

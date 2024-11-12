@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  formData: any = null;
+  isDataSend: boolean = false;
+  onSubmit(form: any) {
+    this.formData = form.form.value;
+    this.isDataSend = true;
+  }
+}
