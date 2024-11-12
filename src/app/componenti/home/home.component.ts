@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirebaseService } from 'src/app/servizi/firebase.service';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,19 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   formData: any = null;
   isDataSend: boolean = false;
+
+  constructor(private firebase: FirebaseService) {}
   onSubmit(form: any) {
     this.formData = form.form.value;
-    this.isDataSend = true;
+    this.firebase
+      .insertPersona(
+        'https://corso-angular-14ad1-default-rtdb.europe-west1.firebasedatabase.app/persone.json',
+        this.formData
+      )
+      .subscribe((data) => {
+        this.isDataSend = true;
+      });
+
+    console.log(this.formData);
   }
 }
