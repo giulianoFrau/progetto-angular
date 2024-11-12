@@ -17,6 +17,7 @@ import { AboutComponent } from './componenti/about/about.component';
 import { ContactComponent } from './componenti/contact/contact.component';
 import { HomeComponent } from './componenti/home/home.component';
 import { NavbarComponent } from './componenti/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { NavbarComponent } from './componenti/navbar/navbar.component';
     FormsModule,
     MatFormFieldModule,
     MatSelectModule,
+    HttpClientModule,
   ],
   providers: [PersoneService],
   bootstrap: [AppComponent],
